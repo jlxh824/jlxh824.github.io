@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang=""><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Introduction to Lévy processes</title>
+    <meta name="description" content="">
+    <meta name="author" content='Pui Kuen Leung'>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+    
+    <link rel="stylesheet" href="/sass/researcher.min.css">
+
+    
+        <link rel="icon" type="image/ico" href="https://tt021-9657.github.io/favicon.ico">
+    
+
+    
+        
+    
+
+    
+</head>
+
+    <body>
+        <div class="container mt-5">
+    <nav class="navbar navbar-expand-sm flex-column flex-sm-row text-nowrap p-0">
+        <a class="navbar-brand mx-0 mr-sm-auto" href="https://tt021-9657.github.io" title="Pui Kuen Leung">
+          
+          Pui Kuen Leung
+        </a>
+        <div class="navbar-nav flex-row flex-wrap justify-content-center">
+            
+                
+                
+                    <a class="nav-item nav-link" href="/levy" title="Lévy Processes">
+                        Lévy Processes
+                    </a>
+                    
+                
+            
+        </div>
+    </nav>
+</div>
+<hr>
+
+        <div id="content">
+<div class="container">
+    <style>
+body, div, span, applet,
+address, dl, dt, dd, ol, ul, li {
+	font: inherit;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+h2 {
+    font-family: Helvetica;
+}
+ul, ol {
+    font-family: Helvetica;
+}
+p, strong {
+    font-family: Helvetica;
+}
+</style>
+<h1 id="an-introduction-to-lévy-processes">An introduction to Lévy processes</h1>
+<p>A Lévy process is a stochastic process starting at 0 with stationary independent increments and paths which are almost surely everywhere right continuous with left limits (càdlàg). Despite the simple definition there is quite a bit of theory which can be developed. We shall begin with an overview of the basics of Poisson random measures.</p>
+<h3 id="poisson-random-measures">Poisson random measures</h3>
+<p>Let $\mathcal{M}$ be the space of $\sigma$-finite measures on a measurable space $(E, \mathcal{E}).$ We equip $\mathcal{M}$ with the smallest $\sigma$-algebra $\mathcal{A}$ such that the maps
+$$ \pi_A :\mathcal{M}\to\mathbb{R},\quad \pi_A(\mu)=\mu(A)$$
+are measurable for all $A\in\mathcal{E}.$ A measurable map $\Theta : (\Omega,\mathcal{F}) \to (\mathcal{M},\mathcal{A})$ is called a random measure. Note that:</p>
+<ul>
+<li>For each $\omega\in\Omega$, $\Theta(\omega)$ is a fixed $\sigma$-finite measure on $(E,\mathcal{E}).$</li>
+<li>For each $A\in\mathcal{E}$, $\Theta(A) := \pi_A\circ\Theta : \Omega\to\mathbb{R}$ is a real-valued random variable which yields the measure of $A$ under $\Theta(\omega).$</li>
+</ul>
+<blockquote>
+<p><strong>Lemma.</strong> Let $\Theta$ and $\Gamma$ be random measures. If either (i) $\{ \Gamma(B_i) \}_{I=1}^k \overset{d}{=} \{\Theta(B_i)\}_{i=1}^k$ for all $B_1,\ldots,B_k\in\mathcal{B}(E)$ and $k\geq 1$, or (ii) $$\int_{E} f \, d\Theta \overset{d} = \int_{E} f \,d\Gamma \quad \text{for all nonnegative measurable functions }f : E\to\mathbb{R},$$ then $\Theta \overset{d}{=}\Gamma.$</p>
+</blockquote>
+<p><em>Proof.</em> Suppose (i) is true. Then $\mathcal{L} := \{ A\in\mathcal{A} : \mathbb{P}(\Theta \in A) = \mathbb{P}(\Gamma \in A) \}$ is a d-system containing the $\pi$-system
+$$ \mathcal{P} := \left\{ \bigcap_{i=1}^k \pi_{B_i}^{-1}(D_i) : B_i \in\mathcal{E},  D_i\in\mathcal{B}(\R) \right\}. $$
+Thus, $\mathcal{A} = \sigma(\mathcal{P})\subset \mathcal{L}$ by the $\pi$-$\lambda$ theorem.  Now suppose (ii) is true. We will show that (ii) implies (i). Let $B_1,\ldots,B_k \in \mathcal{E}$ for $i=1,\ldots,k$.  For $\lambda_1,\ldots,\lambda_k \geq 0$, define $f:= \sum_{i=1}^k \lambda_k 1_{B_i}.$ By assumption, we have
+$$ \sum_{i=1}^k \lambda_i \Theta(B_i) \overset{d}{=} \sum_{i=1}^k \lambda_i \Gamma(B_i).$$
+This implies that $\{\Gamma(B_i)\}_{i=1}^k$ has the same joint Laplace transform as $\{ \Theta(B_i) \}_{i=1}^k$, so they are equal in distribution. ◽</p>
+<p>A point process is a $\overline{\mathbb{Z}}_+$ valued random measure, so that it can be written as
+$$ \Theta = \sum_{k=1}^K \delta_{X_k}, $$
+where the $X_k$ are random points in $E$ and $K \in \{0,1,\ldots,\infty\}$ is also random.</p>
+<blockquote>
+<p><strong>Definition.</strong> A Poisson random measure $\Theta$ on $(E,\mathcal{E})$ with intensity measure $\mu \in \mathcal{M}$ is a point process on $E$ that satisfies:</p>
+<ul>
+<li>For disjoint $\{B_i\}_{i=1}^k \subset \mathcal{E}$, $\{\Theta(B_i)\}_{i=1}^k$ are independent.</li>
+<li>For every $B\in\mathcal{E}$, $\Theta(B)\sim \mathrm{Po}(\mu(B))$.</li>
+</ul>
+<p>We sometimes write $\Theta\sim \mathrm{PProc}(\mu).$</p>
+</blockquote>
+<p>This generalises the notion of a Poisson process on the real line. Indeed, if $N$ is the homogeneous Poisson process on $\mathbb{R}$ with rate parameter $\lambda$, then $N\sim \mathrm{PProc}(\lambda \cdot \mathrm{Leb})$ where $\mathrm{Leb}$ is the Lebesgue measure.</p>
+<h4 id="construction-of-a-poisson-random-measure">Construction of a Poisson random measure</h4>
+<p>A Poisson random measure with a given intensity measure $\mu$ can be constructed as follows. Let $\{E_i\}_{i=1}^\infty$ be a partition of $E$ with $\mu(E_i) &lt; \infty.$  Let $N_i \sim \mathrm{Po}(\mu(E_i))$ be independent for $i=1,2,\ldots$  For $i=1,2,\ldots$ and $\{X_{ij}\}_{i,j\geq 1}$ be independent random variables such that for every $i,$  we have
+$X_{ij} \sim \frac{\mu}{\mu(E_i)}$ are iid for $j=1,2,\ldots$ Then define
+$$\Theta_i := \sum_{j=1}^{N_i}\delta_{X_{ij}}$$
+for $i=1,\ldots$, and let $\Theta := \sum_{i=1}^\infty \Theta_i.$  The claim is that $\Theta$ is a $\mathrm{PProc}(\mu).$  Let $B_1,\ldots,B_k\in\mathcal{E}$ be disjoint.  For $\ell=1,\ldots,k$, we have
+$$ \Theta(B_\ell) = \sum_{i=1}^\infty \Theta_i(B_\ell) = \sum_{i=1}^\infty \sum_{j=1}^{N_i} \delta_{X_{ij}}(B_\ell \cap E_i). $$
+Thus, for $\lambda_1,\ldots,\lambda_k \geq 0$, we have
+$$
+\begin{align*}
+\mathbb{E}\left[ e^{-\sum_{\ell=1}^k \lambda_\ell \Theta(B_\ell)} \right] &amp;= \mathbb{E}[e^{-\sum_{\ell=1}^k \lambda_\ell \sum_{i=1}^\infty \sum_{j=1}^{N_i} \delta_{X_{ij}}(B_\ell \cap E_i)}] \\
+&amp;= \prod_{i=1}^\infty \mathbb{E}[\mathbb{E}[ e^{-\sum_{j=1}^{N_i} \sum_{\ell=1}^k \lambda_\ell \delta_{X_{ij}}(B_\ell \cap E_i)} | N_i ]]\\
+&amp;= \prod_{i=1}^\infty \mathbb{E}[\mathbb{E}[ e^{-Y_{1j}} ]^{N_i}]\\
+&amp;= \prod_{i=1}^\infty e^{-\mu(E_i)(1-\mathbb{E}[e^{-Y_{1j}}])}
+\end{align*}
+$$
+where $Y_{1j}=\sum_{\ell=1}^k \lambda_\ell \delta_{X_{1j}}(B_\ell\cap E_1)$.  Now we note that
+$$\mathbb{P}(Y_{ij} = \lambda_\ell) = \frac{\mu(B_{\ell} \cap E_i)}{\mu(E_i)} \quad \text{and}\quad \mathbb{P}(Y_{ij}=0) = 1-\sum_{\ell=1}^k \frac{\mu(B_\ell \cap E_i)}{\mu(E_i)},$$
+so
+$$\mathbb{E}[e^{-Y_{1j}}] = \sum_{\ell=1}^k e^{-\lambda_\ell} \frac{\mu(B_\ell \cap E_1)}{\mu(E_1)} + \left( 1 -\sum_{\ell=1}^k \frac{\mu(B_\ell\cap E_1)}{\mu(E_1)}\right).$$
+Plugging this back into the previous equation gives
+$$\mathbb{E}\left[ e^{-\sum_{\ell=1}^k \lambda_\ell \Theta(B_\ell)} \right] = \prod_{\ell=1}^k e^{-\mu(B_\ell)(1-e^{\lambda_\ell})}$$
+which gives the result in light of the lemma.</p>
+<h4 id="characteristic-functional">Characteristic functional</h4>
+<p>Let $\Theta$ be a Poisson random measure with intensity $\mu.$ The construction above yields the following useful property of Poisson random measures concerning the characteristic function of the random integral of a function with respect to $\Theta.$</p>
+<blockquote>
+<p><strong>Proposition.</strong> Let $f : E\to \mathbb{R}$ be measurable. If $\int_E (|f|\land 1)\,d\mu &lt; \infty$, then $\int |f|\,d\Theta$ is finite almost surely and it has characteristic function given by $$\mathbb{E}(e^{i\gamma\int f\, d\Theta}) = e^{-\int(1-e^{i\gamma f})\,d\mu}.$$</p>
+</blockquote>
+<p><em>Proof.</em> Recall that if $\eta$ is a Poisson random variable with mean $a$ then $\mathbb{E}(e^{\lambda \eta})=e^{-a(1-\lambda)}.$ Using this it is easy to verify for a simple function $f=\sum_{k=1}^N a_k 1_{A_k}$ with $a_1,\ldots,a_N\in \mathbb{C}$ and $A_1,\ldots,A_N\in\mathcal{E}$ disjoint, $\mathbb{E}(e^{-\lambda \int f \, d\Theta}) = e^{-\int (1-e^{-f})\,d\mu}.$ For general measurable $f$ we may decompose into positive and negative parts and approximate by simple functions using the monotone convergence theorem to show that the identity $\mathbb{E}(e^{-\lambda \int f \, d\Theta}) = e^{-\int (1-e^{-f})\,d\mu}$ still holds. Now assume that $\int_E (|f|\land 1)&lt;\infty.$ Replacing $f$ with $c|f|$ in the identity we just established and
+letting $c\downarrow 0$, the dominated convergence theorem yields $\mathbb{P}(\int_E |f|\,d\Theta &lt; \infty) = 1.$ Choose a sequence $(f_n)$ of simple functions with $f_n\to f$ and $|f_n|\leq |f|$. Since $|1 - e^{-if_n}| \leq |f| \land 2$, the dominated convergence theorem gives $\int_E f_n\,d\Theta \to \int_E f\,d\Theta$ and $\int_E (1 -e^{-if_n})\,d\mu \to \int_E (1 - e^{-if})\,d\mu.$ Hence the desired identity follows from replacing $f$ with $if_n$ in the established identity and then taking limits. ◽</p>
+<p>The characteristic functional yields the following moments.</p>
+<blockquote>
+<p><strong>Corollary.</strong> If $f$ is measurable with $\int_E (|f|\land 1)\,d\mu &lt; \infty$, then the random variable $\int_E f \,d\Theta$ has first and second moments given by $$\mathbb{E}\left( \int_E f \,d\Theta \right)=\int_E f \,d\mu$$ and $$\mathbb{E}\left( \int_E f \,d\Theta \right)^2 = \int_E f^2 \,d\mu + \left( \int_E f\,d\mu\right)^2. $$</p>
+</blockquote>
+<h4 id="compound-poisson-processes">Compound Poisson processes</h4>
+<p>Let $\mu$ be a $\sigma$-finite measure on $E$ and assume that $\int_{[0,\infty)\times E} |x| \,dt\, \mu(dx) &lt; \infty.$ A compound Poisson process is a process $(Y_t)_{t\geq 0}$ of the form $$Y_t = \int_{[0,t]\times E} x N_\mu(ds, dx)$$ where $N_\mu$ is a Poisson random measure on $[0,\infty)\times E$ with intensity measure $\mathrm{Leb}\otimes \mu.$ Note that by the previous proposition, $Y_t$ is almost surely finite for all $t$ and has characteristic function $\varphi(\gamma)= \exp(t{\int(e^{i\gamma x}-1)\,d\mu}).$ Intuitively, $Y_t$ sums the points that come before time $t$ and from this one sees that $(Y_t)_{t\geq 0}$ is a process with independent and stationary increments; combined with the càdlàg path property it is thus a Lévy process.</p>
+<h3 id="lévy-processes-and-infinite-divisibility">Lévy processes and infinite divisibility</h3>
+<p>A probability distribution $\mu$ is called infinitely divisible if for every positive integer $n,$ there are iid random variables $X_{n,1},X_{n,2},\ldots,X_{n,n}$ such that $\sum_{j=1}^n X_{n,j} \sim \mu.$ It turns out that a characterising property of Lévy processes is their infinite divisibility.</p>
+<blockquote>
+<p><strong>Proposition.</strong> Let $(X_t)_{t\geq 0}$ be a Lévy process. Then the law of $X_t$ is infinitely divisible for each $t.$ Moreover, $\mathbb{E}[e^{i\theta X_t}] = (\mathbb{E}[e^{i\theta X_1}])^t$ for each $t$ and thus the law of $X$ is determined by that of $X_1.$ Conversely, if $\mu$ is an infinite divisible distribution then there exists a Lévy process $(X_t)_{t\geq 0}$ with $X_1 \sim \mu.$</p>
+</blockquote>
+<p><em>Proof.</em> Infinite divisibility follows from writing $X_t = \sum_{k=1}^n (X_{tk/n}-X_{t(k-1)/n}).$  From such a decomposition we see that $\mathbb{E}[e^{i\theta X_t}] = (\mathbb{E}[e^{i\theta X_1}])^t$ holds for any $t \in \mathbb{Q}$. In the case of $t$ is irrational, we may approximate by rationals from above and use the dominated convergence theorem and the right continuity of $t\mapsto X_t.$ Now the converse result essentially follows from Kolmogorov&rsquo;s consistency theorem which yields the existence of a process distributed like a Lévy process with $X_1 \sim \mu$ and the fact (which we will not prove) that each Lévy process in law has a modification with càdlàg paths.  ◽</p>
+<p>Thus, Lévy processes infinitely divisible distributions are essentially interchangeable concepts.</p>
+<h4 id="lévy-khintchine-formula">Lévy-Khintchine formula</h4>
+<p>It is possible to completely characterise the characteristic functions of infinitely divisible distributions. This is given by the Lévy-Khintchine formula.</p>
+<blockquote>
+<p><strong>Theorem (Lévy-Khintchine formula).</strong> If $\mu$ is an infinitely divisible distribution, then there is a triplet $(a,\sigma^2,\Pi)$ where $a \in\mathbb{R}$, $\sigma^2\geq 0$, $\Pi$ is a measure on $\mathbb{R}$ with $\Pi(\{0\})=0$ and $\int (1 \land |x|^2)\Pi(dx) &lt; \infty$, such that
+$$\int_{\mathbb{R}} e^{i\lambda x} \mu(dx) =  \exp\left(ia\lambda − \frac{1}{2}\sigma^2\lambda^2 + \int_{\mathbb{R}} (e^{i\lambda x} − 1 − i\lambda x1_{\{|x|\leq 1\}})\Pi(dx)\right).$$</p>
+</blockquote>
+<p>The triple $(a,\sigma^2,\Pi)$ is called the characteristic triplet and $\Pi$ is called the Lévy measure. The proof is much too long to be included here, so we won&rsquo;t prove the result. However, we shall address the existence of a Lévy process with a given characteristic triplet $(a,\sigma^2,\Pi).$ That is, given a characteristic triplet $(a,\sigma^2,\Pi)$ we shall identify a Lévy process $(X_t)_{t\geq 0}$ with
+$$\log\mathbb{E}(e^{i\lambda X_t}) = i\lambda at - \frac{1}{2} \sigma^2\lambda^2t +t\int_\mathbb{R} (e^{i\lambda x}-1− i\lambda x1_{\{|x|\leq1\}})\Pi(dx) .$$
+This will be known as the Lévy-Itô decomposition.</p>
+<h4 id="lévy-itô-decomposition">Lévy-Itô decomposition</h4>
+<p>The idea is to split the characteristic component into suitable parts so that our Lévy process will be a sum of independent simpler processes. Straight away we can see that one of the components can be chosen to be a Brownian motion with drift of the form $at + \sigma B_t$ since $\log\mathbb{E}(e^{i\lambda(at+\sigma B_t)}) = i\lambda at - \frac{1}{2}\sigma^2\lambda^2 t.$ The full decomposition is as follows.</p>
+<blockquote>
+<p><strong>Theorem (Lévy-Itô decomposition).</strong> Let $(a,\sigma^2,\Pi)$ be a characteristic triplet. Then the process $X := W+Y+M$ is a Lévy process with characteristic exponent $$i\lambda at - \frac{1}{2} \sigma^2\lambda^2t +t\int_\mathbb{R} (e^{i\lambda x}-1− i\lambda x1_{\{|x|\leq 1\}})\Pi(dx),$$ where $W_t = at+\sigma B_t$ is a Brownian motion with drift, $Y_t = \int_0^t \int_{|x| &gt; 1} x N_\Pi(ds, dx)$ is a compound Poisson process, and $$M_t = \lim_{\epsilon \downarrow 0} \left(\int_0^t \int_{\epsilon&lt;|x|\leq 1}x\, N_\Pi(ds, dx)-t\int_{\epsilon&lt;|x|\leq 1} x\, \Pi(dx)\right)$$ is a càdlàg $L^2$ martingale where the limit is taken in the $\mathcal{M}^2$ sense.</p>
+</blockquote>
+<p>Here $\mathcal{M}^2$ denotes the Banach space of zero mean càdlàg square-integrable martingales with respect to the completion of the filtration $(\mathcal{F}_t)_{t\geq 0}$ with $\mathcal{F}_t = \sigma(N([0,s]\times B) : 0\leq s\leq t,\, B\in\mathcal{B}(\mathbb{R}))$ equipped with the norm $$\Vert M\Vert_{\mathcal{M}^2} = \sum_{n=1}^\infty 2^{-n}(\Vert M_n\Vert_{L^2(\Omega)} \land 1). $$</p>
+<p>Let us begin the proof of the Lévy-Itô decomposition by splitting up the characteristic exponent into a sum of three components $\Psi^{(1)} + \Psi^{(2)} + \Psi^{(3)}$ where
+$$ \Psi^{(1)}(\lambda) =  i\lambda at - \frac{1}{2} \sigma^2\lambda^2t,\quad \Psi^{(2)}(\lambda) = t\int_{\mathbb{R}\backslash (-1,1)}(e^{i\lambda x}-1)\Pi(dx),$$
+$$\Psi^{(3)}(\lambda) = t \int_{[-1,1]}(e^{i\lambda x}-1-i\lambda x)\Pi(dx).$$
+It is clear that $XW_t$ has characteristic exponent $\Psi^{(1)},$ and from our previous discussion on the compound Poisson process we see that $Y_t$ has characteristic exponent $\Psi^{(2)}.$ It remains to take care of $M_t.$ This is partially done in the following proposition.</p>
+<blockquote>
+<p><strong>Lemma.</strong> For every $\epsilon \in (0,1)$, let $A_\epsilon = [-1,1]\backslash (-\epsilon,\epsilon)$ and define $$M_t^\epsilon := \int_{[0,t]\times A_\epsilon}x\, N_\Pi(ds,dx)-t\int_{A_\epsilon}x\,\Pi(dx).$$ Then $M^\epsilon$ converges in $\mathcal{M}^2$ as $\epsilon \downarrow 0$ to some $M \in \mathcal{M}^2$ with stationary and independent increments.</p>
+</blockquote>
+<p><em>Proof.</em> First we remark that every $M_t^\epsilon$ is an element of $\mathcal{M}^2$ with stationary and independent increments. To show that $(M^\epsilon)$ converges, we show that it is Cauchy. Let $\eta \in (0,\epsilon)$, and pick $t\geq 0.$ Then
+$$
+\begin{align*}
+\Vert M^\eta_t - M^\epsilon_t\Vert^2_{L^2(\Omega)} &amp;= \mathbb{E}[(M_t^\eta-M_t^\epsilon)^2]\\
+&amp;= \mathbb{E}\left[ \left(\int_{[0,t]\times [\eta,\epsilon)}x\, N_\Pi(ds,dx)-t\int_{[\eta,\epsilon)}x\,\Pi(dx)\right)^2 \right] \\
+&amp;= t\int_{[\eta,\epsilon)}x^2 \Pi(dx).
+\end{align*}
+$$
+Hence $\Vert M^\eta-M^\epsilon\Vert_{\mathcal{M}^2} \leq \int_{[\eta,\epsilon)}x^2 \Pi(dx) \sum_{n=1}^\infty n2^{-n}.$ As $\int_{[-1,1]}x^2\Pi(dx)&lt;\infty$, we see that $\Vert M^\eta-M^\epsilon\Vert_{\mathcal{M}^2}\to 0$ as $\eta,\epsilon \to 0.$ Completeness then yields the desired convergence. It remains to show that $\mathcal{M}$ has stationary and independent increments. To this end, fix a positive integer $N$ and by Doob&rsquo;s $L^p$ inequality we have $$\lim_{n\to\infty}\mathbb{E}\left[ \sup_{s\in [0, N]} (M_s-M_s^{1/n})^2 \right] \leq 4 \lim_{n\to\infty}\mathbb{E}(M_N-M_N^{1/n})^2 = 0.$$ Hence there exists a subsequence $(a_n)$ of $(n^{-1})$ such that $\lim_{n\to\infty}\sup_{s\in [0,N]}|M_s-M_s^{a_n}| = 0$ almost surely. Now fix $0\leq s_1 &lt;t_1\leq s_2&lt;\cdots \leq s_n &lt; t_n$, choose $N \geq t_n$, and fix $\theta_1,\ldots,\theta_n.$ The joint characteristic function of the increments is
+$$
+\begin{align*}
+\mathbb{E}\left[ \prod_{j=1}^n e^{i\theta_j(M_{t_j}-M_{s_j})}\right] &amp;= \lim_{k\to\infty} \mathbb{E}\left[\prod_{j=1}^n e^{i\theta_j(M_{t_j}^{a_k}-M_{s_j}^{a_k})} \right] \\
+&amp;= \lim_{k\to\infty} \mathbb{E}\left[\prod_{j=1}^n e^{i\theta_j M_{t_j-s_j}^{a_k}} \right] \\
+&amp;= \prod_{j=1}^n \mathbb{E}[e^{i\theta_j M_{t_j-s_j}}]
+\end{align*}
+$$
+yielding the independence and stationarity of increments.  ◽</p>
+<p>Thus, $M$ is a square-integrable martingale which is also a Lévy process. It now remains to compute its characteristic function. This follows from noting that
+$$M_t^\epsilon = \int_{[0,t]\times A_\epsilon}x\, N_\Pi(ds,dx) - t\int_{A_\epsilon}x\,\Pi(dx)$$ has characteristic function $\lambda \mapsto \exp\left(t \int_{\epsilon &lt; |x|\leq 1}(e^{i\lambda x}-1-i\lambda x)\Pi(dx)\right).$ As $M^\epsilon_t \to M_t$ in $L^2,$ this implies $M^\epsilon_t \to  M_t$ in distribution and thus we have pointwise convergence of the characteristic function as well. Taking this limit we thus see that $M_t$ indeed has characteristic exponent $\Psi^{(3)}$, completing the proof of the Lévy-Itô decomposition.</p>
+
+</div>
+
+        </div><div id="footer" class="mb-5">
+    <hr>
+    
+    
+        <div class="container text-center">
+            <a href="https://tt021-9657.github.io" title=""><small></small></a>
+        </div>
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.css" integrity="sha384-bYdxxUwYipFNohQlHt0bjN/LCpueqWz13HufFEV1SUatKs1cm4L6fFgCi1jT643X" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/katex.min.js" integrity="sha384-Qsn9KnoKISj6dI8g7p1HBlNpVx0I8p1SvlwOldgi3IorMle61nQy4zEahWYtljaz" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          renderMathInElement(document.body, {
+              delimiters: [
+                  {left: "$$", right: "$$", display: true},
+                  {left: "$", right: "$", display: false}
+              ]
+          });
+      });
+  </script>
+    <style>
+	.katex { font-size: 1em !important;  } 
+    </style>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LX8WT1LGZ4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LX8WT1LGZ4');
+</script>
+
+</div>
+</body>
+</html>
