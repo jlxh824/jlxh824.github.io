@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Pui Kuen Leung</title>
-    <link>https://tt021-9657.github.io/</link>
+    <link>https://jlxh824.github.io/</link>
     <description>Recent content in Home on Pui Kuen Leung</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://tt021-9657.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://jlxh824.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Courses</title>
-      <link>https://tt021-9657.github.io/courses/</link>
+      <link>https://jlxh824.github.io/courses/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tt021-9657.github.io/courses/</guid>
+      <guid>https://jlxh824.github.io/courses/</guid>
       <description>Descriptive list of upper division/graduate level coursework MATH4313 Functional Analysis
 Department: School of Mathematics and Statistics, University of Sydney Texts used: None Topics covered: Hahn-Banach theorem, Riesz representation theorem, abstract Fourier series, Baire’s theorem, uniform boundedness principle, applications to Fourier series, open mapping theorem, Banach algebras and Stone-Weierstrass theorem, spectral mapping theorem, spectral theorem for compact operators, spectral theorem for compact normal operators, representations of finite groups (Maschke’s theorem, characters, classification of irreducible representations of Sn), topological groups, Haar measures, representations of compact groups, Peter-Weyl theorem.</description>
     </item>
     
     <item>
       <title>Introduction to Lévy processes</title>
-      <link>https://tt021-9657.github.io/levy/</link>
+      <link>https://jlxh824.github.io/levy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tt021-9657.github.io/levy/</guid>
+      <guid>https://jlxh824.github.io/levy/</guid>
       <description>An introduction to Lévy processes A Lévy process is a stochastic process starting at 0 with stationary independent increments and paths which are almost surely everywhere right continuous with left limits (càdlàg). Despite the simple definition there is quite a bit of theory which can be developed. We shall begin with an overview of the basics of Poisson random measures.
 Poisson random measures Let $\mathcal{M}$ be the space of $\sigma$-finite measures on a measurable space $(E, \mathcal{E}).</description>
     </item>
     
     <item>
       <title>Probability Exercises</title>
-      <link>https://tt021-9657.github.io/probability/</link>
+      <link>https://jlxh824.github.io/probability/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tt021-9657.github.io/probability/</guid>
+      <guid>https://jlxh824.github.io/probability/</guid>
       <description>Probability Exercises Here is a list of 10 very cool exercises in probability theory. If you could work out all of them then you are almost guaranteed to have a decent grasp on the basics of probability and martingale theory. No knowledge of stochastic calculus and Brownian motion (beyond its definition) is needed. Most of them are not supposed to be trivial, but they should not be impossible either especially with the hints I have given.</description>
     </item>
     
     <item>
       <title>自動勝利Let&#39;s Fight</title>
-      <link>https://tt021-9657.github.io/digimon/</link>
+      <link>https://jlxh824.github.io/digimon/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tt021-9657.github.io/digimon/</guid>
+      <guid>https://jlxh824.github.io/digimon/</guid>
       <description> 越搏鬥戰意越高企 自信碰跌了又再起 堅決相信 為戰友 我定必勝利 越探索世界越優美 讓我奮鬥到廿六世紀 堅決相信 為了愛 我定必勝利 來全情 Go Go Go Go Go 只要出手氣勢勁到飛起 來全情 Go Go Go Go Go 大力捍衛理想 自動會 部署準備 遇怪魔 我即刻變大個 遇見高手痛快得多 一激起我就有火 儘快儘快辨勝負 亦不必想再拖 最好的 必須再練過 逐個反擊 對方一個二個 我但求全擊破 Oh Let&#39;s Fight </description>
     </item>
     
     <item>
       <title>願榮光歸香港</title>
-      <link>https://tt021-9657.github.io/hk/</link>
+      <link>https://jlxh824.github.io/hk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tt021-9657.github.io/hk/</guid>
+      <guid>https://jlxh824.github.io/hk/</guid>
       <description> 何以 這土地 淚再流 何以 令眾人 亦憤恨 昂首 拒默沉 吶喊聲 響透 盼自由 歸於 這裡 何以 這恐懼 抹不走 何以 為信念 從沒退後 何解 血在流 但邁進聲 響透 建自由 光輝 香港 在晚星 墜落 徬徨午夜 迷霧裡 最遠處吹來 號角聲 捍自由 來齊集這裡 來全力抗對 勇氣 智慧 也永不滅 黎明來到 要光復 這香港 同行兒女 為正義 時代革命 祈求 民主與自由 萬世都不朽 我願榮光歸香港 </description>
     </item>
     
