@@ -35,9 +35,7 @@
   "education": [
     {
       "institution": "Australian National University",
-      "location": "",
       "url": "https://anu.edu.au/",
-      "area": "",
       "studyType": "Master of Philosophy in Statistics",
       "startDate": "2023",
       "endDate": "",
@@ -46,9 +44,7 @@
     },
     {
       "institution": "University of Sydney",
-      "location": "",
       "url": "https://sydney.edu.au/",
-      "area": "",
       "studyType": "Bachelor of Science (Honours) in Pure Mathematics",
       "startDate": "2021",
       "endDate": "2022",
@@ -57,9 +53,7 @@
     },
     {
       "institution": "Australian National University",
-      "location": "",
       "url": "https://anu.edu.au/",
-      "area": "",
       "studyType": "Bachelor of Science",
       "startDate": "2020",
       "endDate": "2021",
@@ -72,29 +66,25 @@
       "title": "Australian Government Research Training Program Scholarship",
       "date": "2023",
       "awarder": "",
-      "url": "#",
-      "summary": ""
+      "url": "#"
     },
     {
       "title": "University Medal in Pure Mathematics",
       "date": "2022",
       "awarder": "",
-      "url": "#",
-      "summary": ""
+      "url": "#"
     },
     {
       "title": "Harriet Beard Scholarship",
       "date": "2022",
       "awarder": "",
-      "url": "#",
-      "summary": ""
+      "url": "#"
     },
     {
       "title": "Faculty of Science Honours Relocation Scholarship",
       "date": "2021",
       "awarder": "",
-      "url": "#",
-      "summary": ""
+      "url": "#"
     }
   ],
   "certificates": [],
