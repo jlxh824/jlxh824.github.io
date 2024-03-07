@@ -25,8 +25,8 @@
       "name": "Australian National University",
       "position": "Research Assistant",
       "url": "",
-      "startDate": "2023-02-01",
-      "endDate": "2024-08-01",
+      "startDate": "2023",
+      "endDate": "2024",
       "summary": "Research in Lévy processes.",
       "highlights": ["Probability Theory", "Stochastic Processes", "Differential Geometry"]
     }
@@ -39,8 +39,8 @@
       "url": "https://anu.edu.au/",
       "area": "",
       "studyType": "Master of Philosophy in Statistics",
-      "startDate": "2023-02-01",
-      "endDate": "2024-01-01",
+      "startDate": "2023",
+      "endDate": "",
       "score": "10",
       "courses": ["Geometric Analysis", "Spectral Theory for Unbounded Self-adjoint Operators in Hilbert Spaces", "Operator Algebras", "Regularity Theory for Uniformly Elliptic Operators"]
     },
@@ -50,8 +50,8 @@
       "url": "https://sydney.edu.au/",
       "area": "",
       "studyType": "Bachelor of Science (Honours) in Pure Mathematics",
-      "startDate": "2021-08-01",
-      "endDate": "2022-07-01",
+      "startDate": "2021",
+      "endDate": "2022",
       "score": "10",
       "courses": ["Commutative Algebra", "Probability and Martingale Theory", "Stochastic Analysis", "Functional Analysis"]
     },
@@ -61,8 +61,8 @@
       "url": "https://anu/",
       "area": "",
       "studyType": "Bachelor of Science",
-      "startDate": "2020-02-01",
-      "endDate": "2021-07-01",
+      "startDate": "2020",
+      "endDate": "2021",
       "score": "10",
       "courses": []
     }
@@ -70,29 +70,29 @@
   "awards": [
     {
       "title": "Australian Government Research Training Program Scholarship",
-      "date": "2023-01-01",
-      "awarder": "Australian National University",
+      "date": "2023",
+      "awarder": "",
       "url": "",
       "summary": ""
     },
     {
       "title": "University Medal in Pure Mathematics",
       "date": "2022-09-01",
-      "awarder": "University of Sydney",
+      "awarder": "",
       "url": "",
       "summary": ""
     },
     {
       "title": "Harriet Beard Scholarship",
-      "date": "2022-08-31",
-      "awarder": "University of Sydney",
+      "date": "2022",
+      "awarder": "",
       "url": "",
       "summary": ""
     },
     {
       "title": "Faculty of Science Honours Relocation Scholarship",
-      "date": "2021-07-01",
-      "awarder": "University of Sydney",
+      "date": "2021",
+      "awarder": "",
       "url": "",
       "summary": ""
     }
