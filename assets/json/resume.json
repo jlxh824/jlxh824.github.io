@@ -54,6 +54,17 @@
       "endDate": "2022-07-01",
       "score": "10",
       "courses": ["Commutative Algebra", "Probability and Martingale Theory", "Stochastic Analysis", "Functional Analysis"]
+    },
+    {
+      "institution": "Australian National University",
+      "location": "Canberra, Australia",
+      "url": "https://anu/",
+      "area": "",
+      "studyType": "Bachelor of Science",
+      "startDate": "2020-02-01",
+      "endDate": "2021-07-01",
+      "score": "10",
+      "courses": []
     }
   ],
   "awards": [
