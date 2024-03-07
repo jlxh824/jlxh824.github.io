@@ -1,8 +1,8 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: <a href='#'>Australian National University</a>, Canberra, Australia
+subtitle: <a href='https://www.anu.edu.au/'>Australian National University</a>, Canberra, Australia
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
