@@ -58,7 +58,16 @@
       "startDate": "2020",
       "endDate": "2021",
       "score": "10",
-      "courses": []
+      "courses": ["Randomised Numerical Algorithms with Applications to Data Science",
+        "Advanced Analysis 2: Lebesgue Integration and Hilbert Spaces",
+        "Numerical Optimisation",
+        "Stochastic Analysis with Financial Applications",
+        "Advanced Algebra 2: Field extensions and Galois Theory",
+        "Number Theory and Cryptography",
+        "Advanced Functional Analysis, Spectral theory and Applications",
+        "Probability Theory with Applications",
+        "Introduction to Machine Learning"
+      ]
     }
   ],
   "awards": [
