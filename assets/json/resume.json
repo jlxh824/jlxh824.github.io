@@ -42,7 +42,18 @@
       "startDate": "2023-02-01",
       "endDate": "2024-01-01",
       "score": "10",
-      "courses": ["Theory of Relativity"]
+      "courses": ["Geometric Analysis", "Spectral Theory for Unbounded Self-adjoint Operators in Hilbert Spaces", "Operator Algebras", "Regularity Theory for Uniformly Elliptic Operators"]
+    },
+    {
+      "institution": "University of Sydney",
+      "location": "Sydney, Australia",
+      "url": "https://sydney.edu.au/",
+      "area": "",
+      "studyType": "Bachelor of Science (Honours) in Pure Mathematics",
+      "startDate": "2021-08-01",
+      "endDate": "2022-07-01",
+      "score": "10",
+      "courses": ["Commutative Algebra", "Probability and Martingale Theory", "Stochastic Analysis", "Functional Analysis"]
     }
   ],
   "awards": [
