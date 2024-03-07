@@ -69,73 +69,37 @@
   ],
   "awards": [
     {
+      "title": "Australian Government Research Training Program Scholarship",
+      "date": "2023-01-01",
+      "awarder": "Australian National University",
+      "url": "",
+      "summary": ""
+    },
+    {
       "title": "University Medal in Pure Mathematics",
       "date": "2022-09-01",
       "awarder": "University of Sydney",
       "url": "",
-      "summary": "For outstanding performance in Pure Mathematics Honours."
+      "summary": ""
+    },
+    {
+      "title": "Harriet Beard Scholarship",
+      "date": "2022-08-31",
+      "awarder": "University of Sydney",
+      "url": "",
+      "summary": ""
+    },
+    {
+      "title": "Faculty of Science Honours Relocation Scholarship",
+      "date": "2021-07-01",
+      "awarder": "University of Sydney",
+      "url": "",
+      "summary": ""
     }
   ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
-    },
-    {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
-    },
-    {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
-    },
-    {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
-    }
-  ],
+  "certificates": [],
   "publications": [],
-  "skills": [
-    {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
+  "skills": [],
   "languages": [],
   "interests": [
     {
@@ -152,14 +116,5 @@
     }
   ],
   "references": [],
-  "projects": [
-    {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
-    }
-  ]
+  "projects": []
 }
